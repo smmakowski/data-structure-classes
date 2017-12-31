@@ -1,0 +1,73 @@
+const Stack = require('../src/Stack.js');
+const Queue = require('../src/Queue.js');
+const LinkedList = require('../src/LinkedList.js');
+const Tree = require('../src/Tree');
+const Graph = require('../src/Graph.js');
+const BinarySearchTree = require('../src/BinarySearchTree.js');
+const chai = require('chai');
+const expect = chai.expect;
+
+describe('data structures classes', () => {
+  describe('Stack Class Instance', () => {
+    let stack = new Stack();
+    it('should have "private" properties: _storage', () => {
+      expect(stack).to.have.keys('_storage');
+      expect(stack._storage).to.be.an('array');
+    });
+
+    it('should be possible to add and remove items to/from the stack and get size using methods: push(), pop(), and size()', () => {
+      const emptyPop = stack.pop();
+      expect(emptyPop).to.equal(undefined);
+
+      stack.push(1);
+      stack.push(2);
+      stack.push(3);
+      expect(stack.size()).to.equal(3);
+
+      const poppedValue = stack.pop();
+      expect(poppedValue).to.equal(3);
+      expect(stack.size()).to.equal(2);
+    });
+
+    it('should be possible to duplicate the top value on the stack using .duplicate()', () => {
+      stack.push(3);
+      stack.duplicate();
+      expect(stack.size()).to.equal(4);
+      expect(stack._storage[3]).to.equal(3);
+      expect(stack._storage[2]).to.equal(3);
+    });
+
+    it('should be possible to view the value at the top of the stack w/ .peek()', () => {
+      stack.push('I\'m the top!');
+      expect(stack.peek()).to.equal('I\'m the top!');
+    });
+
+    it('should be possible to swap the top to items in the stack using .swap()', () => {
+      stack.push('I wish I was the top...');
+      stack.swap();
+      expect(stack.peek()).to.equal('I\'m the top!');
+      expect(stack._storage[stack.size() - 2]).to.equal('I wish I was the top...');
+    });
+
+    xit('should be possible to rotate the stack ' () => {
+
+    });
+  });
+  xdescribe('Queue Class', () => {
+
+  });
+  xdescribe('LinkedList Class', () => {
+
+  });
+  xdescribe('Tree Class', () => {
+
+  });
+  xdescribe('Graph Class', () => {
+
+  });
+  xdescribe('BinarySearchTree Class', () => {
+
+  });
+
+
+});

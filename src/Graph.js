@@ -1,3 +1,3 @@
- export default class Graph {
+module.exports = class Graph {
 
 }
