@@ -1,0 +1,31 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "classes for data-structures not built-in to JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "data",
+    "structures",
+    "stack",
+    "queue",
+    "linked",
+    "list",
+    "tree",
+    "graph",
+    "binary",
+    "search"
+  ],
+  "author": "Stephen Makowski",
+  "license": "ISC",
+  "dependencies": {
+    "path": "^0.12.7",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}
