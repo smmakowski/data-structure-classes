@@ -38,4 +38,8 @@ module.exports = class Stack {
 
   }
 
+  isEmpty() {
+    return this._storage.length === 0;
+  }
+
 }

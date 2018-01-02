@@ -1,9 +1,17 @@
 module.exports = class Queue {
   constructor() {
-    this.value = 'what';
+    this._storage = [];
   }
 
-  logVal() {
-    console.log(this.value);
+  enqueue(value) {
+    this._storage.push(value);
+  }
+
+  dequeue() {
+    return this._storage.shift();
+  }
+
+  size() {
+    return this._storage.length;
   }
 }
