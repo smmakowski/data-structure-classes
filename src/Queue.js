@@ -14,4 +14,12 @@ module.exports = class Queue {
   size() {
     return this._storage.length;
   }
+
+  peek() {
+    return this._storage[0];
+  }
+
+  isEmpty() {
+    return this._storage.length === 0;
+  }
 }

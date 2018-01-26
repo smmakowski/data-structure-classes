@@ -78,8 +78,14 @@ describe('data structures classes', () => {
   xdescribe('LinkedList Class', () => {
 
   });
-  xdescribe('Tree Class', () => {
+  describe('Tree Class', () => {
+    let root = new Tree();
+    it('should be possible to add children to a tree instance using a value or another tree instance', () => {
 
+    });
+    it('should be possible to search for a value, and have boolean returned', () => {
+      
+    });
   });
   xdescribe('Graph Class', () => {
 
